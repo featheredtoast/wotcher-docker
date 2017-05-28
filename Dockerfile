@@ -1,5 +1,5 @@
 FROM node:7
-RUN apt-get update; apt-get install redis-server
+RUN apt-get update; apt-get install -y redis-server
 USER node
 WORKDIR /home/node
 COPY wotcher wotcher
