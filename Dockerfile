@@ -4,4 +4,5 @@ USER node
 WORKDIR /home/node
 COPY wotcher wotcher
 USER root
-CMD service redis-server start; su '/home/node/wotcher/bin/hubot -a discourse-adapter' node
+WORKDIR /home/node/wotcher
+CMD service redis-server start; /home/node/wotcher/bin/hubot -a discourse-adapter
